@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  basics-app:
+    container_name: basics-app
+    build: 
+      context: ../basics-app/
+      dockerfile: ../docker/Dockerfile
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 3031:3000
+
+  styling-app:
+    container_name: styling-app
+    build: 
+      context: ../styling-app/
+      dockerfile: ../docker/Dockerfile
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 3032:3000
+
+  debugging-app:
+    container_name: debugging-app
+    build: 
+      context: ../debugging-app/
+      dockerfile: ../docker/Dockerfile
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 3033:3000
