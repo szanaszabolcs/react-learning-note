@@ -1,4 +1,4 @@
-React - The complete guide
+# React - The complete guide
 
 ### Install and run applications (with Docker):
 
